@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="imgs/itsur.png">
+            <ul id="menusPrincipales">
+                <li>Menu1</li>
+                <li>Menu2</li>
+                <li>Menu3</li>
+            </ul>
+            <img class="menu" onclick="ocultarMostrar()" src="imgs/menu.png">
+        </nav>
+    </header>
+    <script>
+        function ocultarMostrar(){
+            document.getElementById("menusPrincipales").
+              classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
