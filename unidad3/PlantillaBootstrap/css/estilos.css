@@ -1,0 +1,7 @@
+.bg-success{
+    background-color: var(--bs-teal)!important;    
+}
+
+.bg-success:hover{
+    background-color: var(--bs-green)!important;    
+}
