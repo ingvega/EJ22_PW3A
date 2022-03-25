@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1{
+            width: 40%;
+            padding: 2rem;
+            background-color: cornflowerblue;
+            transition: background-color 2s ease,margin-left 3s 3s;
+        }
+        h1:hover{
+            /*margin-left: 500px;*/
+            background-color: mediumslateblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <button type="button" onclick="cambiar()">Cambiar posición</button>
+    <script>
+        function cambiar(){
+            document.getElementsByTagName("h1")[0].style="margin-left:500px";
+        }
+    </script>
+</body>
+</html>
