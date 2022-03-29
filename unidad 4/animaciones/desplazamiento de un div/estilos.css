@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    /*position: absolute;*/
+    width: 25vw;
+    height: 25vw;
+    background-color: aquamarine;
+    animation-name: desplazar;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes desplazar{
+    0%{
+        margin-left: 0;
+        background-color: aquamarine;
+    }
+    100%{
+        margin-left: 75vw;
+        background-color: rgb(10, 145, 100);
+    }
+    /*100%{
+        bottom: 0;
+        background-color:red;
+    }*/
+}
