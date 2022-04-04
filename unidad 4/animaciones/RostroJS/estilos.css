@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ojoIzq,.ojoDer{
+    position: absolute;
+    width: 100px;
+    height: 166px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: rotate(354deg);
+    /*transform: rotate(-5deg);*/
+}
+
+.ojoDer{
+    margin-left: 127px;
+    transform: rotate(5deg);
+
+}
+
+.parpado{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-top: -250px;
+    margin-left: -102px;
+    z-index: 1;
+    background-color: #fff;
+    /*animation-name: parpadeo;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    */
+    /*animation: parpadeo 2s cubic-bezier(0.68, 0.08, 0.96, 0.11) 2s infinite alternate;*/
+}
+
+.parpado:hover{
+    animation-play-state: paused;
+}
+
+.pupila{
+    width: 50px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 53px 30px;
+    position: absolute;
+}
+
+.brillo{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 15px 29px;
+}
+
+.boca{
+    border: 2px;
+    background-color: rgb(153, 39, 39);
+    width: 170px;
+    /*height: 90px;*/
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 30px;
+    border: 3px solid #000;
+    border-radius: 0 0 80px 80px;
+    overflow: hidden;
+    animation: sonreir 2s ease 0s 1;
+    animation-fill-mode: forwards;
+}
+
+.lenguaIzq,.lenguaDer{
+    width: 62px;
+    height: 150px;
+    background-color: #000;
+    border: 3px solid rgb(153, 39, 39);
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 36px;
+    margin-top: 33px;
+    transform: rotate(8deg);
+}
+
+.lenguaDer{
+    margin-left: 65px;
+}
+
+@keyframes parpadeo {
+    from{
+        margin-top: -250px;
+    }
+    70%{
+        margin-top: -250px;
+    }
+    to{
+        margin-top: -137px;
+    }
+}
+
+@keyframes sonreir{
+    from{
+        height: 5px;
+    }
+    to{
+        height: 90px;
+    }
+
+}
