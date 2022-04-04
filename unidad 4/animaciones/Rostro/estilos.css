@@ -32,12 +32,16 @@
     z-index: 1;
     background-color: #fff;
     animation-name: parpadeo;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-delay: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: cubic-bezier(0.68, 0.08, 0.96, 0.11);
-    /*animation: parpadeo 2s cubic-bezier(0.68, 0.08, 0.96, 0.11) 2s infinite alternate;*/
+    animation-timing-function: linear;
+    
+}
+
+.parpado:hover{
+    animation-play-state: paused;
 }
 
 .pupila{
@@ -57,11 +61,54 @@
     margin: 15px 29px;
 }
 
+.boca{
+    border: 2px;
+    background-color: rgb(153, 39, 39);
+    width: 170px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 30px;
+    border: 3px solid #000;
+    border-radius: 0 0 80px 80px;
+    overflow: hidden;
+    animation: sonreir 2s ease 0s 1;
+    animation-fill-mode: forwards;
+}
+
+.lenguaIzq,.lenguaDer{
+    width: 62px;
+    height: 150px;
+    background-color: #000;
+    border: 3px solid rgb(153, 39, 39);
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 36px;
+    margin-top: 33px;
+    transform: rotate(8deg);
+}
+
+.lenguaDer{
+    margin-left: 65px;
+}
+
 @keyframes parpadeo {
     from{
+        margin-top: -250px;
+    }
+    70%{
         margin-top: -250px;
     }
     to{
         margin-top: -137px;
     }
+}
+
+@keyframes sonreir{
+    from{
+        height: 5px;
+    }
+    to{
+        height: 90px;
+    }
+
 }
