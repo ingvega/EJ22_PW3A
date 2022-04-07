@@ -1,0 +1,8 @@
+*{ padding: 0;margin: 0;box-sizing: border-box;}
+.contenedor{ display: flex;justify-content: center;
+}
+.letra{font-size: 6rem; padding: 1rem;
+    background-color: lightgray;
+    transform: rotateX(180deg);    
+    backface-visibility: hidden;
+}
