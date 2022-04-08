@@ -35,8 +35,8 @@ window.addEventListener("load",function(){
     var retardo=500;
     for(var i=0;i<letras.length;i++){
         config.delay=retardo;
-        config2.delay=retardo;
-        //letras[i].animate(keyframes,config);
+        //config2.delay=retardo;
+        letras[i].animate(keyframes,config);
         //letras[i].animate(keyframes2,config2);
         retardo+=2000;
     }

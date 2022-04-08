@@ -1,11 +1,15 @@
 *{ padding: 0;margin: 0;box-sizing: border-box;}
 .contenedor{ 
-    display: flex;justify-content: center;
-    
+    display: flex;
+    justify-content: center;
+    perspective: 500px;
+    perspective-origin: center top;
 }
 .letra{font-size: 6rem; padding: 1rem;
     background-color: lightgray;
-    transform: rotateY(55deg) rotateX(51deg);
+    /*transform: rotateY(55deg) rotateX(51deg);*/
+    transform: rotateX(180deg);
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    
 }
