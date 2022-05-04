@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NorthwindWebAPI.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace NorthwindWebAPI
 {
@@ -26,12 +28,16 @@ namespace NorthwindWebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddDbContext<NorthwindContext>(options =>
+            {
+                options.UseMySql(Configuration.GetConnectionString("BDNorthwind"),ServerVersion.Parse("8.0.15-mysql"));
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NorthwindWebAPI", Version = "v1" });
             });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
