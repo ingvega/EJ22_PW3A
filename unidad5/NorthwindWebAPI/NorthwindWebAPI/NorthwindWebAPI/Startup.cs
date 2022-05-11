@@ -32,6 +32,16 @@ namespace NorthwindWebAPI
             {
                 options.UseMySql(Configuration.GetConnectionString("BDNorthwind"),ServerVersion.Parse("8.0.15-mysql"));
             });
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:8080");
+                    });
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -55,6 +65,8 @@ namespace NorthwindWebAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {

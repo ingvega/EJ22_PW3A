@@ -48,7 +48,7 @@ namespace NorthwindWebAPI.Controllers
         public IEnumerable<Object> GetTop5()
         {
             return _context.Employees
-                .Where(e => e.CompanyId == 1)
+                .Where(e =>  e.CompanyId == 1)
                 .Join(_context.Movements,
                 e => e.EmployeeId,
                 m => m.EmployeeId,
@@ -71,7 +71,9 @@ namespace NorthwindWebAPI.Controllers
                 .Select(e=> new { 
                     Empleado = e.Key,
                     Ventas = e.Sum(g=>g.Cantidad)
-                });
+                })
+                .OrderByDescending(e => e.Ventas)
+                .Take(5);
 
         }
 
